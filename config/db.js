@@ -4,11 +4,9 @@ const connectDB = async () => {
   try {
     // Replace with your MongoDB connection string.
     const MONGODB_URI =
-      process.env.MONGODB_URI || "mongodb://localhost:27017/incidentDB";
-    await connect(MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+      process.env.MONGODB_URI ||
+      "mongodb+srv://vipuld:admin@learnjsm.c5jfv.mongodb.net/?retryWrites=true&w=majority&appName=learnjsm";
+    await connect(MONGODB_URI);
     console.log("MongoDB connected...");
   } catch (err) {
     console.error("MongoDB connection error:", err);
